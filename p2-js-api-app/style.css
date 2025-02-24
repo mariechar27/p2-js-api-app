@@ -1,0 +1,211 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+  background-color: #fcdadae0;
+  color: #002d62;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: rgb(0, 48, 103);
+  color: white;
+  padding: 15px 0;
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo */
+nav .logo img {
+  width: 75px;
+  height: 75px;
+}
+
+/* Navigation Links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #a9c8e2;
+}
+
+/* Landing Section */
+#landing {
+  text-align: center;
+  padding: 50px;
+}
+
+/* Purpose Boxes */
+.purpose-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.purpose-box {
+  background-color: #a9c8e2;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.purpose-box:hover {
+  background-color: #87b0d6;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 120px 30px 30px;
+  text-align: center;
+}
+
+/* Input and Textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #002d62;
+  border-radius: 5px;
+  font-size: 16px;
+  background: white;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="text"],
+input[type="email"] {
+  height: 40px;
+}
+
+/* Buttons */
+button {
+  background-color: #002d62;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #001b3d;
+}
+
+/* Footer */
+footer {
+  background: rgb(0, 48, 103);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+/* Responsive Design */
+/* Tablets (iPads) */
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  .purpose-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .purpose-box {
+    width: 80%;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 90%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  nav ul li {
+    display: block;
+  }
+  .purpose-box {
+    width: 90%;
+  }
+  main {
+    padding: 100px 20px 20px;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+/*Laptop*/
+@media (max-width: 1200px) {
+  nav {
+    max-width: 1000px;
+  }
+  .purpose-container {
+    justify-content: space-around;
+  }
+}

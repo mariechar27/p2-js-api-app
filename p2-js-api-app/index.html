@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WordFuse - AI Note Summarizer</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="logo.png" alt="WordFuse Logo" width="100" height="100" />
+        </div>
+        <ul>
+          <li><a href="#landing" id="homeBtn">Home</a></li>
+          <li><a href="#contact" id="contactBtn">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Landing Page -->
+      <section id="landing">
+        <h1>Welcome to WORDFUSE <br />AI Note Summarizer</h1>
+        <br />
+        <p>
+          In the modern workspace, employees often take extensive notes during
+          meetings, brainstorming sessions, lectures, or discussions.
+          <br />These notes can become long and overwhelming to go through
+          later.
+        </p>
+        <div class="purpose-container">
+          <div class="purpose-box">
+            <h3>AI-Powered Fusion</h3>
+            <p>
+              Combines key ideas into a single, impactful word or phrase for
+              quick understanding.
+            </p>
+          </div>
+          <div class="purpose-box">
+            <h3>Time-Saving & Efficient</h3>
+            <p>
+              Instantly extracts the essence of notes, lectures, and documents.
+            </p>
+          </div>
+          <div class="purpose-box">
+            <h3>Smart & Context-Aware</h3>
+            <p>
+              Understands meaning to deliver concise and accurate summaries.
+            </p>
+          </div>
+        </div>
+        <button id="startBtn">Start</button>
+      </section>
+
+      <!-- Main Page -->
+      <section id="main" style="display: none">
+        <h2>Summarize Your Text</h2>
+        <textarea
+          id="inputText"
+          placeholder="Enter text to summarize"
+        ></textarea>
+        <br />
+        <button id="summarizeBtn">Summarize</button>
+        <br />
+        <textarea
+          id="outputText"
+          placeholder="Summary will appear here"
+          readonly
+        ></textarea>
+        <br />
+        <button id="copyBtn">Copy</button>
+        <button id="tryAgainBtn">Try Again</button>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" style="display: none">
+        <h2>Contact Us</h2>
+        <p>Sign up for updates:</p>
+        <input
+          type="text"
+          id="completeName"
+          placeholder="Enter your complete name"
+        />
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <br />
+        <button id="submitEmailBtn">Submit</button>
+        <p id="emailMessage" style="display: none"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 WORDFUSE - AI Note Summarizer. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
